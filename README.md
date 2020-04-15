@@ -5,7 +5,7 @@ Features :
 - Live info stream based on News API https://newsapi.org/ and showing the last 20 entries.
 - Homemade Dual scroll.
 - React app based on Create React App.
-- Sass component styling.
+- Sass component styling with smooth css transitions.
 - Date format with react-moment.
 - Remove exotic image formats from API response.
 - Set loader for app and images.
