@@ -1,0 +1,73 @@
+// color palette from : https://codepen.io/ryanmcnz/pen/ivtmJ
+$color-4: #01a9f4;
+$color-5: #0377bc;
+
+.summary {
+    width: 20%;
+    position: fixed;
+    color: #FFF;
+    display: table;
+    li {
+        opacity: 0.3;
+        position: relative;
+        display: table;
+        font-size: 2em;
+        transition: all 0.6s;
+        text-align: center;
+        width: 100%;
+        align-self: center;
+        font-family: 'Squada One', cursive;
+        p {
+            transition: all 0.6s;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #000;
+            font-weight: normal;
+        }
+        &.readable {
+            opacity: 1;
+            font-size: 4em;
+            font-weight: bold;
+            p {
+                font-size: 28px;
+            }
+        }
+        height: 100px;
+        padding: 10%;
+        &:nth-child(even) {
+            background: $color-4;
+        }
+        &:nth-child(odd) {
+            background: $color-5;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .summary {
+        li {
+            font-size: 2em;
+            &.readable {
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .summary {
+        li {
+            padding: 0;
+            font-size: 0.9em;
+            &.readable {
+                font-size: 1.4em;
+                p {
+                    font-size: 14px;
+                }
+            }
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}

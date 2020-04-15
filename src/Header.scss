@@ -1,0 +1,98 @@
+$color-1: #79BD9A;
+$color-2: #0377bc;
+$color-3: #e91f63;
+$color-4: #01a9f4;
+$spriteSize: 20px;
+
+.header {
+    height: 60px;
+    width: 100%;
+    background: $color-2;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    border-bottom: 8px solid #000;
+    -webkit-box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.15);
+    img.logo {
+        width: 20%;
+        max-width: 200px;
+        margin-left: 2em;
+        padding: 0.3em;
+    }
+    .subheader {
+        width: 80%;
+        .search, .refresh {
+            width: 50%;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            margin: auto 0;
+            padding: 0.5em;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: bold;
+            transition: all 0.5s;
+            &:hover {
+                letter-spacing: 5px;
+                border: 2px solid #FFF;
+            }
+        }
+        .search {
+            background: $color-3;
+            border: 2px solid $color-3;
+            
+            &:before {
+                position: absolute;
+                display: block;
+                opacity: 1;
+                content: ' ';
+                background-image: url('./img/loupe.svg');
+                background-size: $spriteSize $spriteSize;
+                height: $spriteSize;
+                width: $spriteSize;
+            }
+        }
+        .refresh {
+            background: $color-4;
+            border: 2px solid $color-4;
+            &:before {
+                position: absolute;
+                display: block;
+                opacity: 1;
+                content: ' ';
+                background-image: url('./img/refresh.svg');
+                background-size: $spriteSize $spriteSize;
+                height: $spriteSize;
+                width: $spriteSize;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .header {
+        border-bottom: 4px solid #000;
+        .subheader {
+            .search, .refresh {
+                font-size: 0.4em;
+                &:before {
+                    top: 21px;
+                    background-image: none;
+                    // background-size: 15px 15px;
+                    // height: 15px;
+                    // width: 15px;
+                }
+                &:hover {
+                    letter-spacing: normal;
+                }
+            }
+        }
+        img.logo {
+            margin-left: 0;
+            width: 36%;
+        }
+    }
+}
