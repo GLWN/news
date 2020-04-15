@@ -1,7 +1,7 @@
 ## News App by GLWN
 
 Features :
-- Generate a live info stream based on keyword input.
+- Generate a live info stream based on keyword input. Demo : http://www.glwn.fr/news
 - Live info stream based on News API https://newsapi.org/ and showing the last 20 entries.
 - Homemade Dual scroll.
 - React app based on Create React App.
