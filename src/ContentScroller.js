@@ -14,9 +14,11 @@ const ContentScroller = ({data}) => {
         <Summary key={index} id={index} date={item.publishedAt}/>
     );
 
+    // TODO : filter Legorafi.fr source and remove descr/content redundancy
+
     const content = data.map((item, index) =>
         <Content
-            key={index} 
+            key={index}
             author={item.author}
             title={item.title}
             date={item.publishedAt}

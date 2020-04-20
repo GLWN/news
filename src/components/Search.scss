@@ -18,7 +18,9 @@ $color-4: #01a9f4;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        input, button {
+            width: 200px;
+        }
         input {
             font-size: 1em;
             border: 5px solid $color-3; 
